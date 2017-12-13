@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="798.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PurchaseController">
+   <children>
+      <ScrollPane layoutX="8.0" layoutY="59.0" prefHeight="736.0" prefWidth="976.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="732.0" prefWidth="970.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="1.0" text="Puchase details">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="42.0" text="Dealer Name">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="purchaseDealerName" layoutX="120.0" layoutY="42.0" promptText="Dealer Name" />
+                  <Label layoutX="278.0" layoutY="42.0" text="GSTIN">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="purchaseGSTINNumber" layoutX="330.0" layoutY="42.0" prefHeight="25.0" prefWidth="174.0" promptText="Dealer GSTN" />
+                  <TableView fx:id="table" layoutX="12.0" layoutY="125.0" prefHeight="478.0" prefWidth="796.0">
+                     <columns>
+                        <TableColumn fx:id="collmItemsID" prefWidth="132.0" text="ItemCode" />
+                        <TableColumn fx:id="collName" prefWidth="179.0" text="Item Name" />
+                        <TableColumn fx:id="collHSNNumber" prefWidth="89.0" text="HSN" />
+                        <TableColumn fx:id="collQtyType" prefWidth="124.0" text="Quantity" />
+                        <TableColumn fx:id="collPrice" prefWidth="86.0" text="Price" />
+                        <TableColumn fx:id="colligstAmount" prefWidth="58.0" text="GST" />
+                        <TableColumn fx:id="collPrice11" prefWidth="50.0" text="IGST" />
+                        <TableColumn fx:id="collTotal" prefWidth="77.0" text="Total" />
+                     </columns>
+                  </TableView>
+                  <Label fx:id="purchaseGrandTotal" layoutX="808.0" layoutY="232.0" text="Rs.0000">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="823.0" layoutY="303.0" mnemonicParsing="false" onAction="#savePurchaseDetails" prefHeight="25.0" prefWidth="89.0" text="save">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="511.0" layoutY="43.0" text="Date">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datePicker" layoutX="546.0" layoutY="43.0" prefHeight="25.0" prefWidth="138.0" promptText="Date of Purchase" />
+                  <Label layoutX="698.0" layoutY="43.0" text="Invoice No">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="purchaseInvoiceNumber" layoutX="781.0" layoutY="43.0" prefHeight="25.0" prefWidth="172.0" promptText="Invoice Number" />
+                  <TextField fx:id="itemCode" layoutX="14.0" layoutY="100.0" prefHeight="25.0" prefWidth="132.0" promptText="Enter Item code" />
+                  <TextField fx:id="itemName" layoutX="146.0" layoutY="100.0" prefHeight="25.0" prefWidth="178.0" promptText="Enter Item Name" />
+                  <TextField fx:id="quantity" layoutX="412.0" layoutY="100.0" prefHeight="25.0" prefWidth="65.0" promptText="QTY" />
+                  <Button layoutX="812.0" layoutY="100.0" mnemonicParsing="false" onAction="#addItemsToTable" prefHeight="25.0" prefWidth="42.0" text="add" />
+                  <ComboBox fx:id="qtyChoose" layoutX="476.0" layoutY="100.0" prefHeight="25.0" prefWidth="60.0" />
+                  <TextField fx:id="price" layoutX="534.0" layoutY="100.0" prefHeight="25.0" prefWidth="88.0" text="0" />
+                  <Button layoutX="808.0" layoutY="159.0" mnemonicParsing="false" onAction="#deleteItemFromTable" text="delete" />
+                  <TextField fx:id="hsn" layoutX="324.0" layoutY="100.0" prefHeight="25.0" prefWidth="90.0" promptText="HSN" />
+                  <TextField fx:id="total" layoutX="731.0" layoutY="100.0" prefHeight="25.0" prefWidth="79.0" text="0" />
+                  <TextField fx:id="gstAmount" layoutX="622.0" layoutY="100.0" prefHeight="25.0" prefWidth="58.0" text="0" />
+                  <TextField fx:id="igstAmount" layoutX="680.0" layoutY="100.0" prefHeight="25.0" prefWidth="52.0" text="0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

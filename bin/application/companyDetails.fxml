@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="796.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.companyDetailsController">
+   <children>
+      <Label layoutX="54.0" layoutY="90.0" text="Company Name" />
+      <TextField fx:id="companyName" layoutX="170.0" layoutY="86.0" prefHeight="25.0" prefWidth="411.0" promptText="Comapny Name" />
+      <Label layoutX="54.0" layoutY="129.0" text="Company Address" />
+      <TextField fx:id="companyAddress" layoutX="170.0" layoutY="125.0" prefHeight="25.0" prefWidth="411.0" promptText="Company Address" />
+      <Label layoutX="54.0" layoutY="165.0" text="Company GSTIN" />
+      <TextField fx:id="companyGstin" layoutX="170.0" layoutY="161.0" prefHeight="25.0" prefWidth="411.0" promptText="Company GSTIN" />
+      <Label layoutX="54.0" layoutY="205.0" text="Company Contact No" />
+      <TextField fx:id="companyContact" layoutX="170.0" layoutY="201.0" prefHeight="25.0" prefWidth="411.0" promptText="Company Contact Number" />
+      <Button layoutX="169.0" layoutY="257.0" mnemonicParsing="false" onAction="#addUpdateCompanyDetails" text="Add/Update Deatails" />
+      <Label fx:id="hidden" layoutX="169.0" layoutY="51.0" text="Details updated/add !" textFill="#19d70b" visible="false" />
+   </children>
+</AnchorPane>

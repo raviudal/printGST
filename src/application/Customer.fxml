@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="798.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CustomerController">
+   <children>
+      <ScrollPane layoutX="8.0" layoutY="59.0" prefHeight="636.0" prefWidth="976.0">
+         <content>
+            <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="636.0" prefWidth="958.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="25.0" text="Add New Customer">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="67.0" text="Customer name">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="customerCustomerName" layoutX="133.0" layoutY="67.0" promptText="Customer Name" />
+                  <Label layoutX="297.0" layoutY="67.0" text="Mobile">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="customerMobileNumber" layoutX="355.0" layoutY="67.0" promptText="Mobile" />
+                  <Label layoutX="541.0" layoutY="67.0" text="GSTIN">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="customerGstin" layoutX="598.0" layoutY="67.0" prefHeight="25.0" prefWidth="230.0" promptText="GSTIN " />
+                  <Label layoutX="70.0" layoutY="101.0" text="Address">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="customerAdderss" layoutX="133.0" layoutY="101.0" prefHeight="25.0" prefWidth="224.0" promptText="Address" />
+                  <Button fx:id="customerAddCustomer" layoutX="844.0" layoutY="67.0" mnemonicParsing="false" onAction="#customerAddCustomer" text="Add Customer" />
+                  <TableView fx:id="table" layoutX="14.0" layoutY="184.0" prefHeight="405.0" prefWidth="946.0">
+                     <columns>
+                        <TableColumn fx:id="collid" prefWidth="72.0" text="id" />
+                        <TableColumn fx:id="collname" prefWidth="151.0" text="Name" />
+                        <TableColumn fx:id="collmobile" prefWidth="151.0" text="Mobile Number" />
+                        <TableColumn fx:id="collgstin" prefWidth="166.0" text="GSTIN" />
+                        <TableColumn fx:id="colladdr" prefWidth="203.0" text="Address" />
+                        <TableColumn fx:id="collduebalance" prefWidth="94.0" text="Due Balance" />
+                        <TableColumn fx:id="colladvancebalance" prefWidth="107.0" text="Advance Balance" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="844.0" layoutY="149.0" mnemonicParsing="false" onAction="#editCustomer" text="Edit Customer" />
+                  <Button layoutX="619.0" layoutY="149.0" mnemonicParsing="false" onAction="#refreshTable" text="Refresh Table" />
+                  <Button layoutX="723.0" layoutY="149.0" mnemonicParsing="false" onAction="#deletecustomer" text="Delete Customer" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

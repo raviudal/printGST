@@ -1,0 +1,68 @@
+
+billingcustGSTIn
+billingcustAddr
+
+billingCustomerName
+billingMoblie
+billingcustGSTIn
+billingcustAddr
+
+
+
+invoice_date
+customer_name
+customer_number
+customer_gstin
+total_sgst
+total_cgst
+total_igst
+taxable_value
+cess
+amount
+
+custAddr
+billingcustAddr
+
+
+
+
+
+float totalBillableAmount = 0.0f;
+	float totalTax = 0.0f;
+	float totalCgst = 0f;
+	float totalSgst = 0f;
+	float totalIgst = 0f;
+	float totalcess = 0.0f;
+	float sgstRate = 0f;
+	float cgstRate = 0f;
+	String custname = "";
+	String custMob = "";
+	String custGstin = "";
+	float cess = 0.0f;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
